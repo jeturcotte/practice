@@ -7,9 +7,3 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('has boobs', () => {
-  render(<App />);
-  const hElement = screen.getByText(/boobs/i);
-  expect(hElement).toBeInTheDocument();
-});
-

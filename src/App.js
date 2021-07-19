@@ -17,7 +17,6 @@ function App() {
         >
           Learn React
         </a>
-        <h3>boobs</h3>
       </header>
     </div>
   );
