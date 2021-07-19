@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true jeturcotte/practice npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-practice"
+  env: "Dockerpractice-env-1"
+  bucket_name: "elasticbeanstalk-us-east-1-719083034189"
+  bucket_path: "docker-practice"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
