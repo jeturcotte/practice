@@ -6,4 +6,4 @@ before_install:
   - docker build -t jeturcotte/practice -f Dockerfile.dev .
 
 script:
-  - docker run jeturcotte/practice npm run test -- --coverage
+  - docker run -e CI=true jeturcotte/practice npm run test -- --coverage
